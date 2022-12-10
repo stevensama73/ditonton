@@ -15,6 +15,7 @@ class WatchlistTvBloc extends Bloc<WatchlistTvEvent, WatchlistTvState> {
   static const watchlistTvRemoveSuccessMessage = 'Removed from Watchlist';
 
   bool _isAddedtoWatchlistTv = false;
+
   bool get isAddedToWatchlistTv => _isAddedtoWatchlistTv;
 
   final SaveTvWatchlist _saveWatchlistTv;
