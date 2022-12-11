@@ -9,6 +9,7 @@ import 'package:ditonton/data/models/tv_table.dart';
 import 'package:ditonton/domain/entities/tv.dart';
 import 'package:ditonton/domain/entities/tv_detail.dart';
 import 'package:ditonton/domain/repositories/tv_repository.dart';
+import 'package:flutter/services.dart';
 
 class TvRepositoryImpl implements TvRepository {
   final TvRemoteDataSource remoteDataSource;
@@ -28,6 +29,10 @@ class TvRepositoryImpl implements TvRepository {
       return Left(ServerFailure(''));
     } on SocketException {
       return Left(ConnectionFailure('Failed to connect to the network'));
+    } on TlsException {
+      return Left(SSLFailure('CERTIFICATE_VERIFY_FAILED'));
+    } on PlatformException {
+      return Left(SSLFailure('CONNECTION_NOT_SECURE'));
     }
   }
 
@@ -40,6 +45,10 @@ class TvRepositoryImpl implements TvRepository {
       return Left(ServerFailure(''));
     } on SocketException {
       return Left(ConnectionFailure('Failed to connect to the network'));
+    } on TlsException {
+      return Left(SSLFailure('CERTIFICATE_VERIFY_FAILED'));
+    } on PlatformException {
+      return Left(SSLFailure('CONNECTION_NOT_SECURE'));
     }
   }
 
@@ -52,6 +61,10 @@ class TvRepositoryImpl implements TvRepository {
       return Left(ServerFailure(''));
     } on SocketException {
       return Left(ConnectionFailure('Failed to connect to the network'));
+    } on TlsException {
+      return Left(SSLFailure('CERTIFICATE_VERIFY_FAILED'));
+    } on PlatformException {
+      return Left(SSLFailure('CONNECTION_NOT_SECURE'));
     }
   }
 
@@ -64,6 +77,10 @@ class TvRepositoryImpl implements TvRepository {
       return Left(ServerFailure(''));
     } on SocketException {
       return Left(ConnectionFailure('Failed to connect to the network'));
+    } on TlsException {
+      return Left(SSLFailure('CERTIFICATE_VERIFY_FAILED'));
+    } on PlatformException {
+      return Left(SSLFailure('CONNECTION_NOT_SECURE'));
     }
   }
 
@@ -76,6 +93,10 @@ class TvRepositoryImpl implements TvRepository {
       return Left(ServerFailure(''));
     } on SocketException {
       return Left(ConnectionFailure('Failed to connect to the network'));
+    } on TlsException {
+      return Left(SSLFailure('CERTIFICATE_VERIFY_FAILED'));
+    } on PlatformException {
+      return Left(SSLFailure('CONNECTION_NOT_SECURE'));
     }
   }
 
@@ -88,6 +109,10 @@ class TvRepositoryImpl implements TvRepository {
       return Left(ServerFailure(''));
     } on SocketException {
       return Left(ConnectionFailure('Failed to connect to the network'));
+    } on TlsException {
+      return Left(SSLFailure('CERTIFICATE_VERIFY_FAILED'));
+    } on PlatformException {
+      return Left(SSLFailure('CONNECTION_NOT_SECURE'));
     }
   }
 
